@@ -1,0 +1,25 @@
+2020/05/27 18:32:21 Instrumentation Key Is Empty Skipping App Insight Logger
+Entering context manager injector. Current time:2020-05-27T18:32:23.743540
+Starting the daemon thread to refresh tokens in background for process with pid = 118
+Entering Run History Context Manager.
+Preparing to call script [ register_model.py ] with arguments: ['--model_folder', '/mnt/batch/tasks/shared/LS_root/jobs/team5ws/azureml/4825a781-d87d-4652-81b4-0cdca869a7eb/mounts/workspaceblobstore/azureml/70f5e072-7230-4555-b20f-0d7447bb2e91/model_folder']
+After variable expansion, calling script [ register_model.py ] with arguments: ['--model_folder', '/mnt/batch/tasks/shared/LS_root/jobs/team5ws/azureml/4825a781-d87d-4652-81b4-0cdca869a7eb/mounts/workspaceblobstore/azureml/70f5e072-7230-4555-b20f-0d7447bb2e91/model_folder']
+
+Loading model from /mnt/batch/tasks/shared/LS_root/jobs/team5ws/azureml/4825a781-d87d-4652-81b4-0cdca869a7eb/mounts/workspaceblobstore/azureml/70f5e072-7230-4555-b20f-0d7447bb2e91/model_folder
+Starting the daemon thread to refresh tokens in background for process with pid = 118
+
+
+The experiment failed. Finalizing run...
+Cleaning up all outstanding Run operations, waiting 300.0 seconds
+2 items cleaning up...
+Cleanup took 0.17467284202575684 seconds
+Traceback (most recent call last):
+  File "register_model.py", line 23, in <module>
+    tags={'Training context':'Pipeline', 'AUC': run.get_metrics()['auc']})
+KeyError: 'auc'
+
+2020/05/27 18:32:30 mpirun version string: {
+Intel(R) MPI Library for Linux* OS, Version 2018 Update 3 Build 20180411 (id: 18329)
+Copyright 2003-2018 Intel Corporation.
+}
+2020/05/27 18:32:30 MPI publisher: intel ; version: 2018
