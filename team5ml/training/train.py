@@ -68,7 +68,8 @@ def get_model_metrics(model, data):
 def main():
     print("Running train.py")
     ws = Workspace.from_config()
-    data_df = ws.datasets.get("drivers dataset")
+    data_df1 = ws.datasets.get("drivers dataset")
+    data_df = data_df1.to_pandas_dataframe()
     parameters = {
         'learning_rate': 0.02,
         'boosting_type': 'gbdt',
