@@ -25,10 +25,10 @@ POSSIBILITY OF SUCH DAMAGE.
 """
 
 import numpy as np
-import pandas as pd
 from sklearn import metrics
 from sklearn.model_selection import train_test_split
 import lightgbm
+from azureml.core import Workspace
 
 
 # Split the dataframe into test and train data
@@ -67,7 +67,8 @@ def get_model_metrics(model, data):
 
 def main():
     print("Running train.py")
-    data_df = pd.read_csv('porto_seguro_safe_driver_prediction_train.csv')
+    ws = Workspace.from_config()
+    data_df = ws.datasets.get("drivers dataset")
     parameters = {
         'learning_rate': 0.02,
         'boosting_type': 'gbdt',
