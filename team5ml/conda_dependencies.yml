@@ -40,3 +40,5 @@ dependencies:
 
       # lightgbm package
       - lightgbm
+
+      - azureml-dataprep
