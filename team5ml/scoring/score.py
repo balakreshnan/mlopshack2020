@@ -62,7 +62,7 @@ output_sample = np.array([
 @input_schema('data', NumpyParameterType(input_sample))
 @output_schema(NumpyParameterType(output_sample))
 def run(data, request_headers):
-    data = np.array(json.loads(data)['data'])
+    #data1 = np.array(json.loads(data)['data'])
     result = model.predict(data)
 
     # Demonstrate how we can log custom data into the Application Insights
